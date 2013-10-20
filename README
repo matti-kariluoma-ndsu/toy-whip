@@ -23,6 +23,9 @@ Which can be viewed here:
 		wsgi.py     # default file, used by Apache when deploying app fo' real
 	whip_data/ # application code
 		__init__.py
+		forms.py   # Holds html <form> definitions
 		models.py  # The database definition
 		tests.py   # unit tests, I personally don't use them
 		views.py   # This is where we write our HTTP and HTML generating functions
+		templates/ # Directory for .html files referenced in views.py
+		static/    # Directory for js, css, etc. assets
