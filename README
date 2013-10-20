@@ -1,0 +1,16 @@
+
+=Files in this project:=
+ /
+	doc/      # spreadsheets, txt files, etc.
+	manage.py # default file, used to launch a testing server & manage 
+	README    # the file you're reading
+	whip/     # project configuration
+		__init__.py
+		settings.py # manage.py looks here for config
+		urls.py     # determines which URLs are valid, and maps them to your app
+		wsgi.py     # default file, used by Apache when deploying app fo' real
+	whip_data/ # application code
+		__init__.py
+		models.py  # The database definition
+		tests.py   # unit tests, I personally don't use them
+		views.py   # This is where we write our HTTP and HTML generating functions
