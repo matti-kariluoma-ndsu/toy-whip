@@ -35,7 +35,7 @@ class Zipcode(models.Model):
 
 class Location(models.Model):
 	name			= models.CharField(max_length=200, help_text='')
-	zipcode	 = models.ForeignKey(Zipcode, help_text='Format: 12345, The five-digit zipcode of this locaton.')
+	zipcode	 = models.ForeignKey(Zipcode, help_text='Format: 12345, The five-digit zipcode of this location.')
 	
 	def __unicode__(self):
 		return self.name

@@ -31,6 +31,7 @@ def get_report(request):
 			{
 				'home_url': HOME_URL,
 				'locations': locations,
+				'variety_trials': util.trials_at(locations),
 			},
 			context_instance=RequestContext(request)
 		)

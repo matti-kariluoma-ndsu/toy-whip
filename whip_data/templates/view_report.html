@@ -4,7 +4,26 @@
 {% endblock %}
 
 {% block content %}
-	{% for location in locations %}
-		{{ location }}
-	{% endfor %}
+	<table border='1'>
+		<tr>
+			<td></td>
+			{% for location in locations %}
+			<td>{{ location }}</td>
+			{% endfor %}
+		</tr>
+		{% for variety, trials in variety_trials.items %}
+		<tr>
+			<td>{{ variety }}</td>
+			{% for trial in trials %}
+			<td>
+				{% if trial %}
+					{{ trial.bushels_acre }}
+				{% else %}
+					--
+				{% endif %}
+			</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
 {% endblock %}

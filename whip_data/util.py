@@ -30,3 +30,16 @@ def the_locations_near(zipcode):
 		d = R * c
 		distances[location] = d
 	return sorted(distances, key=lambda location: distances[location])
+
+def trials_at(locations):
+	trials = models.Trial_Entry.objects.filter(location__in=locations)
+		
+	variety_trials_by_location = {}
+	for trial in trials:
+		try:
+			variety_trials_by_location[trial.variety][locations.index(trial.location)] = trial
+		except KeyError:
+			variety_trials_by_location[trial.variety] = [None] * len(locations)
+			variety_trials_by_location[trial.variety][locations.index(trial.location)] = trial
+			
+	return variety_trials_by_location
