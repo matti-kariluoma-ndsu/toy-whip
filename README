@@ -19,13 +19,13 @@ Which can be viewed here:
 	whip/     # project configuration
 		__init__.py
 		settings.py # manage.py looks here for config
-		urls.py     # determines which URLs are valid, and maps them to your app
-		wsgi.py     # default file, used by Apache when deploying app fo' real
+		urls.py     # determines which URLs are valid
+		wsgi.py     # default file, used by Apache when deployed
 	whip_data/ # application code
 		__init__.py
 		forms.py   # Holds html <form> definitions
 		models.py  # The database definition
 		tests.py   # unit tests, I personally don't use them
-		views.py   # This is where we write our HTTP and HTML generating functions
+		views.py   # This is where we deliver the HTTP and HTML
 		templates/ # Directory for .html files referenced in views.py
 		static/    # Directory for js, css, etc. assets

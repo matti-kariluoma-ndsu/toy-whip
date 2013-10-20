@@ -2,7 +2,7 @@
 
 {% block content %}
 <div id="main">
-	<form id="static_form" action="{{home_url}}/view/last_3_years/bushels_acre/" method="GET">
+	<form id="static_form" action="{{home_url}}/view/" method="GET">
 		{% for field in zipcode_form %}
 		<div>
 			<span style='color: red'>{{ field.errors }}</span>

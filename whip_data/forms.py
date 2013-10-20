@@ -1,4 +1,5 @@
 from django import forms
+from whip_data import models
 
 # forms for the report view
 class SelectLocationForm(forms.Form):
@@ -12,19 +13,19 @@ class SelectLocationForm(forms.Form):
 # Custom forms to populate our database
 class VarietyForm(forms.ModelForm):
 	class Meta:
-		model = Variety
+		model = models.Variety
 		
 class Trial_EntryForm(forms.ModelForm):
 	class Meta:
-		model = Trial_Entry
+		model = models.Trial_Entry
 		# exclude any ForeignKey or ManyToMany fields
 		# and/or don't allow the user to effect certain fields
 		#exclude = (,)
 		
 class LocationForm(forms.ModelForm):
 	class Meta:
-		model = Location
+		model = models.Location
 		
-class DateForm(ModelForm):
+class DateForm(forms.ModelForm):
 	class Meta:
-		model = Date
+		model = models.Date
