@@ -29,3 +29,4 @@ Which can be viewed here:
 		views.py   # This is where we deliver the HTTP and HTML
 		templates/ # Directory for .html files referenced in views.py
 		static/    # Directory for js, css, etc. assets
+
